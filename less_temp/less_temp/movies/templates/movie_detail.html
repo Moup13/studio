@@ -1,0 +1,12 @@
+{% extends 'movies_base.html' %}
+{% block movies %}
+{% load static %}
+<h1>{{movie.title}}</h1>
+     <div class="item_movie">
+                    <a href="{{ movie.get_absolute_url }}">
+                        <img src=" {% if movie.images %}{{ movie.images.url }}{% else %}{% static 'img/no_img.png' %}{% endif %}"
+                             alt="Фото">
+                    </a>
+                    <a href="{{ movie.get_absolute_url }}">{{ movie.title }}</a>
+                </div>
+{% endblock %}

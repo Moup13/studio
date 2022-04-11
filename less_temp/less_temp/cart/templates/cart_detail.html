@@ -1,0 +1,10 @@
+{% extends 'movies_base.html' %}
+{% load static %}
+
+{% block movies %}
+    {% for item in cart %}
+        <p>{{ item.product.name }}</p>
+
+    {% endfor %}
+
+{% endblock %}
